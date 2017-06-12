@@ -23,7 +23,7 @@ BAKE=scripts/rmp rumprun-bake
 	mkdir -p bin
 	mkdir -p .build
 	$(GCC) -o .build/unikernel.raw unikernel.c
-	$(BAKE) hw_generic .build/unikernel.bin .build/unikernel.raw
+	$(BAKE) hw_virtio .build/unikernel.bin .build/unikernel.raw
 
 bin/unikernel.iso: .build/unikernel.bin grub.cfg
 	mkdir -p .build/iso/boot/grub
